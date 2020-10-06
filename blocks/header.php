@@ -4,5 +4,11 @@
         <a class="p-2 text-dark" href="index.php">Главная</a>
         <a class="p-2 text-dark" href="about.php">Контакты</a>
     </nav>
-    <a class="btn btn-outline-primary" href="#">Вход</a>
+    <?php
+        if($_COOKIE['user'] == 'Да'){
+    ?>
+    <a class="btn btn-outline-primary" href="/auth.php">Кабинет пользователя</a>
+    <?php }else{ ?>
+    <a class="btn btn-outline-primary" href="/auth.php">Войти</a>
+    <?php } ?>
 </div>
